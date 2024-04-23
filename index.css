@@ -1,0 +1,81 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: Agency FB, Algerian, Times New Roman;
+	font-size: 20px;
+}
+
+h1{
+	font-size: 50px;
+}
+
+h2{
+	font-size: 30px;
+	text-align: center;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+header{
+	text-align: center;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #333; 
+	color: white; 
+	text-align: center; 
+	padding: 10px; 
+}
+
+#divUL{
+	border-top: 2px solid white;
+}
+
+ul{
+	width: 200px;
+	margin: auto;
+	color: white;
+	display: flex;
+	list-style-type: none;
+}
+
+li{
+	padding: 5px;
+}
+
+#divTableau{
+	width: 1200px;
+	margin: auto;
+}
+
+#affichage{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#listeCat{
+	border-radius: 10px;
+	background-color: gray; 
+}
+
+#listeCat p{
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+#listeCat h3{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+
