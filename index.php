@@ -1,5 +1,5 @@
 
-<?php $titre = 'Gestion Utilisateurs'; ?>
+<?php $titre = 'ACTUALITES POLYTECHNICIENNES'; ?>
 
 <?php include("entete.php");?>
 
