@@ -11,7 +11,7 @@
 		$id = $_GET['id'];
 
 		$req = $bdd->prepare('SELECT Article.titre, Categorie.libelle, Article.contenu FROM Article
-		INNER JOIN Categorie ON Article.id = Categorie.id WHERE Article.id = :id');
+		INNER JOIN Categorie ON Article.categorie = Categorie.id WHERE Article.categorie = :id');
 		$req->execute(array(
 		'id' => $id
 		));?>
