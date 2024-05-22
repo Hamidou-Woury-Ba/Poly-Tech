@@ -1,26 +1,25 @@
+<?php
+	require_once './controleur/controller.php';
 
-<?php $titre = 'ACTUALITES POLYTECHNICIENNES'; ?>
+	$controller = new Controller();
 
-<?php include("entete.php");?>
-
-<?php include 'menu.php'; ?>
-
-<h2>Les dernières actualités</h2>
-<div id="divTableau">
-	<?php 
-	include 'database.php';
-	$reponse = $bdd->query('SELECT * FROM Article');
-	?>
-
-	<div>
-		<?php foreach ($reponse as $donnee) { ?>
-			<div id="listeCat">
-				<h3><?= $donnee['titre']?></h3>
-				<p><?= $donnee['contenu']?></p>
-			</div>
-		<?php } ?>
-	</div>
-	
-</div>		
-
-<?php include("footer.php") ?>
+	if(!isset($_GET['action'])){
+		$controller->showAccueil();
+	}else{
+		if(strtolower($_GET['action']) === 'article'){
+			if(isset($_GET['id'])){
+				$controller->showArticle($_GET['id']);
+			}else{
+				$controller->showErrorPage();
+			}
+		}else if(strtolower($_GET['action']) === 'categorie'){
+			if(isset($_GET['id'])){
+				$controller->showCategorie($_GET['id']);
+			}else{
+				$controller->showErrorPage();
+			}
+		}else{
+			$controller->showAccueil();
+		}
+	}
+?>
